@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #e64a19;
+        }
+
+        .recipes {
+            display: flex;
+            flex-direction: column;
+            /* Stack cards vertically */
+            gap: 20px;
+            /* Add spacing between rows */
+            align-items: center;
+            /* Center-align cards on smaller screens */
+        }
+
+        .recipes {
+            display: flex;
+            flex-direction: column;
+            /* Stack cards vertically */
+            gap: 20px;
+            /* Add spacing between rows */
+            align-items: center;
+            /* Center-align cards on smaller screens */
+        }
+
+        .recipe {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: white;
+            width: 100%;
+            /* Make the card take the full width of its container */
+            max-width: 800px;
+            /* Restrict the maximum width to match the main container */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe img {
+            width: 100%;
+            height: 250px;
+            /* Increase height for a larger image */
+            object-fit: cover;
+        }
+
+        .recipe h3 {
+            margin: 10px;
+            font-size: 1.5em;
+            /* Larger heading font size */
+            text-align: center;
+            /* Center the title */
+        }
+
+        .recipe ul {
+            padding-left: 20px;
+        }
+
+        .recipe p,
+        .recipe ul {
+            margin: 10px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .recipe a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .recipe a:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for a recipe...">
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="recipes" id="recipes"></div>
+        <div class="error" id="error"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
